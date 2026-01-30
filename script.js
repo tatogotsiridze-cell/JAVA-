@@ -1,11 +1,11 @@
-const firstName = prompt("What's your first name?");
-const lastName = prompt("What's your last name?");
-const age = prompt("How old are you?");
-const username = prompt("What's your username?");
-const password = prompt("What's your password?");
-
-alert("First Name: " + firstName +
-      "Last Name: " + lastName +
-      "Age: " + age + " years old" +
-      "Username: " + username +
-      "Password: " + password);
+const age = prompt ("Please enter your age:");
+const hastiket = prompt ("do you have ticket :");
+const p=prompt ("are you  whit parent :");
+const lt = prompt("are you late :");
+if (age >= 18 && hastiket === "yes" && lt === "no") {
+    alert("  you can enter ");
+} else if (age < 13 && p === "yes" && hastiket === "yes" ) {
+    alert("You can enter.");
+} else  ( hastiket === "yes" && lt === "yes") {
+    alert("You cant enter.");
+} 
