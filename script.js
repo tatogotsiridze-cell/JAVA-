@@ -1,9 +1,19 @@
-const numbers=[12, 6, 92, 64,];
+const numbers1 = [1,4,6,9,12,15];
+const numbers2 = [2,5,7,11,14,18];
 
-for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-        console.log("luwi number:", numbers[i]);
-    } else {
-        console.log("kenti number:", numbers[i]);
+
+
+
+function counteven (number) {
+    let count = 0;
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] % 2 === 0) {
+            count++;
+        }
     }
+    return count;   
 }
+  console.log(counteven(numbers1));
+  console.log(counteven(numbers2));
+
+
