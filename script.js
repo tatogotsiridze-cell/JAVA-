@@ -1,19 +1,18 @@
-const numbers1 = [1,4,6,9,12,15];
-const numbers2 = [2,5,7,11,14,18];
+const students = {
+ firstName: "nika", 
+    lastName: "gelashvili",
+    grades: [ 70, 80, 60],
 
-
-
-
-function counteven (number) {
-    let count = 0;
-    for (let i = 0; i < number.length; i++) {
-        if (number[i] % 2 === 0) {
-            count++;
+      getAverage: function() {
+        let sum = 0;
+        for (let i = 0; i < this.grades.length; i++) {
+          sum += this.grades[i];
         }
-    }
-    return count;   
-}
-  console.log(counteven(numbers1));
-  console.log(counteven(numbers2));
-
-
+        return sum / this.grades.length;
+      },
+      isPassing: function() {
+        return this.getAverage() >= 50;
+      }
+};
+ 
+console.log("Average: " + students.getAverage() + ", Passing: " + students.isPassing());
